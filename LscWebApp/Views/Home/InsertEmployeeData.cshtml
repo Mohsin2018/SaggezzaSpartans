@@ -1,0 +1,28 @@
+﻿@model EmployeeDataModel
+@{
+    ViewData["Title"] = "Employee Insertion";
+}
+
+<div class="row">
+    <h1 style="color: cornflowerblue; margin-left: 12px;">Save Employee Information In Azure Cloud Database</h1>
+    <div class="col-md-12">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label style="font-weight: 600; color: lightsteelblue;">Name</label>
+                <input asp-for="Name" class="form-control"  placeholder="Enter Name" required/>
+            </div>
+            <div class="form-group">
+                <label style="font-weight: 600;color: lightsteelblue;">Designation</label>
+                <input asp-for="Designation" class="form-control" placeholder="Enter Designation" required/>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label style="font-weight: 600;color: lightsteelblue;">Age</label>
+                    <input asp-for="Age" class="form-control" placeholder="Enter Age" required/>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="background-color: lightseagreen;">Save Employee Data</button>
+        </form>
+    </div>
+</div>
